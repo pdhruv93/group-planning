@@ -1,0 +1,59 @@
+:root{
+    font-family: 'Roboto', sans-serif;
+    --primary-text-color: #323338;
+    --green-color: rgb(0, 200, 117);
+    --blue-color: #0073ea;
+    --orange-color: rgb(253, 171, 61);
+    --red-color: #f65f7c;
+    --shadow-color: #ccc;
+    --light-gray-color: #f5f6f8;
+    --hover-color: #e6e9ef;
+}
+
+.heading{
+    font-size: 2rem;
+    font-weight: bold;
+    letter-spacing: -1px;
+    line-height: 52px;
+    color: var(--primary-text-color);
+    margin-bottom: 2rem;
+}
+
+.sub-heading{
+    font-size: 1.5rem;
+    line-height: 52px;
+    color: var(--primary-text-color);
+    margin-bottom: 2rem;
+
+}
+
+.bold{
+    font-weight: bold;
+}
+
+body{
+    margin: 2rem;
+}
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+body::-webkit-scrollbar {
+    display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+body {
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+}
+
+
+html{
+    font-size: 62.5%; /* 1rem = 10px; 10px/16px = 62.5% */
+}
+
+/* It will be applied to BIG-DESKTOPS */
+@media only screen and (min-width: 1800px) {
+    html{
+        font-size: 75%; /* 1rem = 12px; 12px/16px = 75% */
+    }
+}
