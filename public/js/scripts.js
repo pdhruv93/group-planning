@@ -89,14 +89,15 @@ $(document).ready(function(){
                 $.toast('Plan Publshed!!');
 
                 console.log("Sending IFTTT request to add entry to calendar!!");
-                fetch('https://maker.ifttt.com/trigger/add_group_plan_to_cal/with/key/nUAQzI_yocZt3fh7MIXDK1N639A03wgwdeNlhbrVp88', {
-                    method: "POST",
-                    body: {
-                        value1: shiftName.split("-")[0]+" "+shiftName.split("-")[1],
-                        value2: shiftName.split("-")[0]+" "+shiftName.split("-")[2], 
-                        value3: taskName
+
+                $.ajax({
+                    url: "https://maker.ifttt.com/trigger/add_group_plan_to_cal/with/key/nUAQzI_yocZt3fh7MIXDK1N639A03wgwdeNlhbrVp88",
+                    type: "POST",
+                    data: {
+                        "value1": shiftName.split("-")[0]+" "+shiftName.split("-")[1],
+                        "value2": shiftName.split("-")[0]+" "+shiftName.split("-")[2],
+                        "value3": taskName
                     },
-                    headers: {"Content-type": "application/json"}
                 })
                 .then(response => console.log("Entry added to Calendar!!")) 
                 .catch(err => console.log(err));
