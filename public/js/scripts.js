@@ -93,14 +93,11 @@ $(document).ready(function(){
                 $.ajax({
                     url: "https://maker.ifttt.com/trigger/add_group_plan_to_cal/with/key/nUAQzI_yocZt3fh7MIXDK1N639A03wgwdeNlhbrVp88",
                     type: "POST",
-                    crossDomain: true,
-                    dataType: 'jsonp',
                     data: {
                         "value1": shiftName.split("-")[0]+" "+shiftName.split("-")[1],
                         "value2": shiftName.split("-")[0]+" "+shiftName.split("-")[2],
                         "value3": taskName
                     },
-                    beforeSend: setHeader,
                 })
                 .then(response => console.log("Entry added to Calendar!!")) 
                 .catch(err => console.log(err));
